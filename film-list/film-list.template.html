@@ -1,0 +1,52 @@
+<h2>The Films</h2>
+<hr>
+<!-- Input form, radio & selection box -->
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Search Film: </span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="e.g: The Force Awakens" ng-model="$ctrl.query">
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="input-group">
+                    <span class="input-group-addon">Sort By: </span>
+                    <select class="form-control" ng-model="$ctrl.sortType">
+                        <option value="title">Title</option>
+                        <option value="episode_id">Episode ID</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="input-group">
+                    <span class="input-group-addon">Order:
+                        <input type="radio" ng-model="$ctrl.sortOrder" ng-value="false"> Ascending
+                        <input type="radio" ng-model="$ctrl.sortOrder" ng-value="true"> Descending
+                    </span>
+                </div>
+            </div>
+            </div>
+    </div>
+</div>
+
+<!-- Display Films -->
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-lg-4 repeated-item" ng-repeat="film in $ctrl.films | filter: {title:$ctrl.query} | orderBy:$ctrl.sortType:$ctrl.sortOrder">
+        <div class="thumbnail film">
+            <img src="images/icon.png">
+            <span>
+                <ul>
+                    <li><strong>Director: </strong>{{film.director}}</li>
+                    <li><strong>Producer: </strong>{{film.producer}}</li>
+                    <li><strong>Release : </strong>{{film.release_date}}</li>
+                </ul>
+            </span>
+            <div class="caption">
+                <h3>#{{film.episode_id}} {{film.title}}</h3>
+            </div>
+        </div>   
+    </div>
+</div>
+<!-- EOF -->
