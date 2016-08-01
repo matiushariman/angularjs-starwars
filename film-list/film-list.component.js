@@ -10,7 +10,7 @@ angular.
             var sortOrder = false;
             
             // Get data from swapi
-            $http.get('http://swapi.co/api/films/').then(function(response){
+            $http.get('https://swapi.co/api/films/').then(function(response){
                 self.films = response.data.results;
             });   
         }
