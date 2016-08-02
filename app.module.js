@@ -1,1 +1,1 @@
-var starwarsApp = angular.module('starwarsApp', ['ngRoute', 'ngAnimate', 'filmList']);
+var starwarsApp = angular.module('starwarsApp', ['ngRoute', 'ngAnimate', 'filmList', 'filmDetail']);

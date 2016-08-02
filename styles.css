@@ -10,6 +10,16 @@ h1, h2, h3, .film span strong {
     color: #f9e60a;
 }
 
+h4 {
+    font-family: 'Amaranth', sans-serif;
+    font-weight: bold;
+}
+
+.btn.btn-default:hover {
+    background-color: #f9e60a;
+    border: 1px solid #1d1d1d;
+}
+
 .navbar.navbar-default {
     background-color: #f9e60a;
     border-bottom: 2px solid #1d1d1d;
@@ -30,7 +40,7 @@ h1, h2, h3, .film span strong {
     width: 100%;
 }
 
-.film span {
+.overview{
     position: absolute;
     top: 0; left: 0;
     width: 100%;
@@ -38,13 +48,7 @@ h1, h2, h3, .film span strong {
     padding: 15px 0 0 5px;
     font-family: 'Amaranth', sans-serif;
     color: white;
-    background: rgba(0,0,0,0.7);
-    opacity: 0;
-    transition: 0.5s linear;
-}
-
-.film span:hover {
-    opacity: 1.0;
+    background: rgba(0,0,0,0.7);  
 }
 
 .thumbnail {
@@ -53,6 +57,12 @@ h1, h2, h3, .film span strong {
 
 .caption {
     text-align: center;
+}
+
+.detail-container{
+    background-color: #f9e60a;
+    border: 1px solid #1d1d1d;
+    border-radius: 30px;
 }
 
 /*ngAnimate*/

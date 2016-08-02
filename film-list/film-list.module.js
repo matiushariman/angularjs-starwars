@@ -1,1 +1,1 @@
-angular.module('filmList', []);
+var filmList = angular.module('filmList', []);
