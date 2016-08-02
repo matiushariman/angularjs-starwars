@@ -4,8 +4,7 @@ filmList.directive('filmOverview', function(){
        templateUrl: 'film-list/film-list-overview.template.html',
        replace: true,
        scope:{
-           film: "="
-       }
-       
+           film: "=" // Pass film object
+       }  
    } 
 });
